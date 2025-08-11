@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced HTML5 Content & Forms</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      header {
+        background-color: #f4f4f4;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+      }
+
+      section {
+        margin-bottom: 40px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      ul,
+      ol {
+        margin: 15px 0;
+        padding-left: 30px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .media-container {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      audio,
+      video {
+        max-width: 100%;
+        margin: 10px;
+      }
+
+      form {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      fieldset {
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+
+      legend {
+        font-weight: bold;
+        color: #2c3e50;
+        padding: 0 10px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+      }
+
+      input:invalid {
+        border-color: #dc3545;
+      }
+
+      input:valid {
+        border-color: #28a745;
+      }
+
+      .checkbox-group,
+      .radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+
+      .checkbox-group label,
+      .radio-group label {
+        display: flex;
+        align-items: center;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+
+      .checkbox-group input,
+      .radio-group input {
+        width: auto;
+        margin-right: 8px;
+        margin-bottom: 0;
+      }
+
+      .submit-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .submit-btn:hover {
+        background-color: #0056b3;
+      }
+
+      .reset-btn {
+        background-color: #6c757d;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+
+      .reset-btn:hover {
+        background-color: #545b62;
+      }
+
+      .required {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Enhanced HTML5 Content & Advanced Forms</h1>
+      <p>
+        This page demonstrates the use of advanced HTML5 content elements
+        including lists, tables, media, and comprehensive form validation
+        techniques.
+      </p>
+    </header>
+
+    <main>
+      <!-- Lists Section -->
+      <section>
+        <h2>📋 Structured Lists</h2>
+
+        <h3>Popular Programming Languages (Ordered List)</h3>
+        <ol>
+          <li>JavaScript - Versatile language for web development</li>
+          <li>Python - Excellent for data science and automation</li>
+          <li>Java - Enterprise-level applications</li>
+          <li>C# - Microsoft ecosystem development</li>
+          <li>Go - Modern systems programming</li>
+        </ol>
+
+        <h3>Web Development Skills (Unordered List)</h3>
+        <ul>
+          <li>
+            <strong>Frontend Technologies</strong>
+            <ul>
+              <li>HTML5 semantic elements</li>
+              <li>CSS3 and responsive design</li>
+              <li>JavaScript ES6+</li>
+              <li>React, Vue, or Angular frameworks</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Backend Technologies</strong>
+            <ul>
+              <li>Node.js and Express</li>
+              <li>Database management (SQL/NoSQL)</li>
+              <li>API design and development</li>
+              <li>Server deployment and DevOps</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Development Tools</strong>
+            <ul>
+              <li>Version control with Git</li>
+              <li>Code editors and IDEs</li>
+              <li>Testing frameworks</li>
+              <li>Project management tools</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>Course Curriculum (Description List)</h3>
+        <dl>
+          <dt><strong>Week 1-2: HTML Fundamentals</strong></dt>
+          <dd>
+            Learn semantic HTML5 elements, document structure, and accessibility
+            best practices
+          </dd>
+
+          <dt><strong>Week 3-4: CSS Styling</strong></dt>
+          <dd>
+            Master CSS selectors, layout techniques, and responsive design
+            principles
+          </dd>
+
+          <dt><strong>Week 5-6: JavaScript Basics</strong></dt>
+          <dd>
+            Understand DOM manipulation, event handling, and modern JavaScript
+            features
+          </dd>
+
+          <dt><strong>Week 7-8: Advanced Topics</strong></dt>
+          <dd>
+            Explore frameworks, APIs, and deployment strategies for modern web
+            applications
+          </dd>
+        </dl>
+      </section>
+
+      <!-- Tables Section -->
+      <section>
+        <h2>📊 Data Tables</h2>
+
+        <h3>Course Enrollment Statistics</h3>
+        <table>
+          <caption>
+            Student enrollment data by course and semester
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Course Name</th>
+              <th scope="col">Instructor</th>
+              <th scope="col">Fall 2024</th>
+              <th scope="col">Spring 2025</th>
+              <th scope="col">Total Enrolled</th>
+              <th scope="col">Pass Rate (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Web Development Fundamentals</th>
+              <td>Dr. Sarah Johnson</td>
+              <td>45</td>
+              <td>52</td>
+              <td>97</td>
+              <td>89%</td>
+            </tr>
+            <tr>
+              <th scope="row">Advanced JavaScript</th>
+              <td>Prof. Mike Chen</td>
+              <td>38</td>
+              <td>41</td>
+              <td>79</td>
+              <td>92%</td>
+            </tr>
+            <tr>
+              <th scope="row">Database Design</th>
+              <td>Dr. Emily Rodriguez</td>
+              <td>33</td>
+              <td>39</td>
+              <td>72</td>
+              <td>87%</td>
+            </tr>
+            <tr>
+              <th scope="row">Mobile App Development</th>
+              <td>Prof. David Kim</td>
+              <td>29</td>
+              <td>35</td>
+              <td>64</td>
+              <td>94%</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">Totals</th>
+              <td>4 Instructors</td>
+              <td>145</td>
+              <td>167</td>
+              <td>312</td>
+              <td>90.5%</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <!-- Media Section -->
+      <section>
+        <h2>🎬 Media Content</h2>
+
+        <h3>Course Introduction Video</h3>
+        <div class="media-container">
+          <video
+            controls
+            width="600"
+            height="400"
+            poster="https://via.placeholder.com/600x400/4CAF50/FFFFFF?text=Course+Introduction"
+          >
+            <source src="course-intro.mp4" type="video/mp4" />
+            <source src="course-intro.webm" type="video/webm" />
+            <track
+              kind="subtitles"
+              src="course-intro-en.vtt"
+              srclang="en"
+              label="English"
+            />
+            <track
+              kind="subtitles"
+              src="course-intro-es.vtt"
+              srclang="es"
+              label="Español"
+            />
+            Your browser does not support the video tag. Please upgrade to a
+            modern browser.
+          </video>
+          <p>
+            <em
+              >Introduction to Web Development Course - featuring key concepts
+              and learning objectives</em
+            >
+          </p>
+        </div>
+
+        <h3>Podcast: Developer Interviews</h3>
+        <div class="media-container">
+          <audio controls>
+            <source src="developer-interview.mp3" type="audio/mpeg" />
+            <source src="developer-interview.ogg" type="audio/ogg" />
+            Your browser does not support the audio element. Please use a
+            compatible browser.
+          </audio>
+          <p>
+            <em
+              >Weekly podcast featuring interviews with industry professionals
+              and career advice</em
+            >
+          </p>
+        </div>
+
+        <h3>Course Materials</h3>
+        <figure>
+          <img
+            src="https://via.placeholder.com/800x400/2196F3/FFFFFF?text=Web+Development+Roadmap"
+            alt="Comprehensive web development learning roadmap showing progression from beginner to advanced topics"
+            width="800"
+            height="400"
+          />
+          <figcaption>
+            <strong>Figure 1:</strong> Complete web development learning roadmap
+            - A visual guide showing the progression from HTML/CSS basics
+            through advanced frameworks and deployment strategies.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Advanced Form Section -->
+      <section>
+        <h2>📝 Student Registration Form</h2>
+        <p>
+          Please fill out this comprehensive registration form. All fields
+          marked with <span class="required">*</span> are required.
+        </p>
+
+        <form action="/submit-registration" method="post" novalidate>
+          <!-- Personal Information -->
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="firstName"
+              >First Name <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              required
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-z\s]+"
+              placeholder="Enter your first name"
+              autocomplete="given-name"
+            />
+
+            <label for="lastName"
+              >Last Name <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              required
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-z\s]+"
+              placeholder="Enter your last name"
+              autocomplete="family-name"
+            />
+
+            <label for="email"
+              >Email Address <span class="required">*</span></label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="student@example.com"
+              autocomplete="email"
+            />
+
+            <label for="phone"
+              >Phone Number <span class="required">*</span></label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              pattern="[\+]?[0-9\s\-\(\)]+"
+              placeholder="+1 (555) 123-4567"
+              autocomplete="tel"
+            />
+
+            <label for="birthDate"
+              >Date of Birth <span class="required">*</span></label
+            >
+            <input
+              type="date"
+              id="birthDate"
+              name="birthDate"
+              required
+              min="1950-01-01"
+              max="2010-12-31"
+            />
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="">Please select...</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="non-binary">Non-binary</option>
+              <option value="prefer-not-to-say">Prefer not to say</option>
+            </select>
+          </fieldset>
+
+          <!-- Address Information -->
+          <fieldset>
+            <legend>Address Information</legend>
+
+            <label for="streetAddress"
+              >Street Address <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="streetAddress"
+              name="streetAddress"
+              required
+              placeholder="123 Main Street, Apt 4B"
+              autocomplete="street-address"
+            />
+
+            <label for="city">City <span class="required">*</span></label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              required
+              placeholder="New York"
+              autocomplete="address-level2"
+            />
+
+            <label for="state"
+              >State/Province <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="state"
+              name="state"
+              required
+              placeholder="NY"
+              autocomplete="address-level1"
+            />
+
+            <label for="zipCode"
+              >ZIP/Postal Code <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="zipCode"
+              name="zipCode"
+              required
+              pattern="[0-9]{5}(-[0-9]{4})?"
+              placeholder="12345 or 12345-6789"
+              autocomplete="postal-code"
+            />
+
+            <label for="country">Country <span class="required">*</span></label>
+            <select id="country" name="country" required autocomplete="country">
+              <option value="">Select a country...</option>
+              <option value="US">United States</option>
+              <option value="CA">Canada</option>
+              <option value="GB">United Kingdom</option>
+              <option value="AU">Australia</option>
+              <option value="DE">Germany</option>
+              <option value="FR">France</option>
+              <option value="JP">Japan</option>
+              <option value="OTHER">Other</option>
+            </select>
+          </fieldset>
+
+          <!-- Academic Information -->
+          <fieldset>
+            <legend>Academic Information</legend>
+
+            <label for="studentId">Student ID (if existing student)</label>
+            <input
+              type="text"
+              id="studentId"
+              name="studentId"
+              pattern="[A-Z]{2}[0-9]{6}"
+              placeholder="AB123456"
+              readonly
+              title="This field will be auto-generated for new students"
+            />
+
+            <label for="academicLevel"
+              >Academic Level <span class="required">*</span></label
+            >
+            <div class="radio-group">
+              <label>
+                <input
+                  type="radio"
+                  name="academicLevel"
+                  value="undergraduate"
+                  required
+                />
+                Undergraduate
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="academicLevel"
+                  value="graduate"
+                  required
+                />
+                Graduate
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="academicLevel"
+                  value="postgraduate"
+                  required
+                />
+                Postgraduate
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="academicLevel"
+                  value="continuing-education"
+                  required
+                />
+                Continuing Education
+              </label>
+            </div>
+
+            <label for="major"
+              >Intended Major/Field of Study
+              <span class="required">*</span></label
+            >
+            <select id="major" name="major" required>
+              <option value="">Choose your field...</option>
+              <option value="computer-science">Computer Science</option>
+              <option value="web-development">Web Development</option>
+              <option value="software-engineering">Software Engineering</option>
+              <option value="data-science">Data Science</option>
+              <option value="cybersecurity">Cybersecurity</option>
+              <option value="information-systems">Information Systems</option>
+              <option value="digital-design">Digital Design</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="gpa">Current GPA (if applicable)</label>
+            <input
+              type="number"
+              id="gpa"
+              name="gpa"
+              min="0.0"
+              max="4.0"
+              step="0.01"
+              placeholder="3.75"
+            />
+
+            <label for="startDate"
+              >Preferred Start Date <span class="required">*</span></label
+            >
+            <input
+              type="date"
+              id="startDate"
+              name="startDate"
+              required
+              min="2025-08-01"
+            />
+          </fieldset>
+
+          <!-- Course Preferences -->
+          <fieldset>
+            <legend>Course Preferences & Interests</legend>
+
+            <label
+              >Select courses you're interested in
+              <span class="required">*</span> (choose at least 2):</label
+            >
+            <div class="checkbox-group">
+              <label>
+                <input
+                  type="checkbox"
+                  name="courses"
+                  value="html-css-fundamentals"
+                  required
+                />
+                HTML/CSS Fundamentals
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="courses"
+                  value="javascript-essentials"
+                />
+                JavaScript Essentials
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="courses"
+                  value="react-development"
+                />
+                React Development
+              </label>
+              <label>
+                <input type="checkbox" name="courses" value="backend-nodejs" />
+                Backend with Node.js
+              </label>
+              <label>
+                <input type="checkbox" name="courses" value="database-design" />
+                Database Design
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="courses"
+                  value="mobile-development"
+                />
+                Mobile Development
+              </label>
+            </div>
+
+            <label for="learningMode"
+              >Preferred Learning Mode <span class="required">*</span></label
+            >
+            <div class="radio-group">
+              <label>
+                <input
+                  type="radio"
+                  name="learningMode"
+                  value="online"
+                  required
+                />
+                Online Only
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="learningMode"
+                  value="hybrid"
+                  required
+                />
+                Hybrid (Online + In-person)
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="learningMode"
+                  value="in-person"
+                  required
+                />
+                In-person Only
+              </label>
+            </div>
+
+            <label for="experience">Previous Programming Experience</label>
+            <select id="experience" name="experience">
+              <option value="">Select your level...</option>
+              <option value="none">No experience</option>
+              <option value="beginner">Beginner (0-1 years)</option>
+              <option value="intermediate">Intermediate (2-3 years)</option>
+              <option value="advanced">Advanced (4+ years)</option>
+              <option value="professional">Professional developer</option>
+            </select>
+
+            <label for="goals"
+              >Learning Goals & Objectives
+              <span class="required">*</span></label
+            >
+            <textarea
+              id="goals"
+              name="goals"
+              required
+              minlength="50"
+              maxlength="500"
+              rows="4"
+              placeholder="Describe your learning goals, career objectives, and what you hope to achieve through this program (minimum 50 characters)..."
+            ></textarea>
+          </fieldset>
+
+          <!-- Additional Information -->
+          <fieldset>
+            <legend>Additional Information</legend>
+
+            <label for="referralSource">How did you hear about us?</label>
+            <select id="referralSource" name="referralSource">
+              <option value="">Please select...</option>
+              <option value="search-engine">Search Engine</option>
+              <option value="social-media">Social Media</option>
+              <option value="friend-referral">Friend/Family Referral</option>
+              <option value="advertisement">Online Advertisement</option>
+              <option value="educational-institution">
+                Educational Institution
+              </option>
+              <option value="career-counselor">Career Counselor</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="website">Personal Website/Portfolio URL</label>
+            <input
+              type="url"
+              id="website"
+              name="website"
+              placeholder="https://yourportfolio.com"
+            />
+
+            <label for="linkedin">LinkedIn Profile URL</label>
+            <input
+              type="url"
+              id="linkedin"
+              name="linkedin"
+              placeholder="https://linkedin.com/in/yourprofile"
+            />
+
+            <label for="emergencyContact"
+              >Emergency Contact Name <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="emergencyContact"
+              name="emergencyContact"
+              required
+              placeholder="Full name of emergency contact"
+            />
+
+            <label for="emergencyPhone"
+              >Emergency Contact Phone <span class="required">*</span></label
+            >
+            <input
+              type="tel"
+              id="emergencyPhone"
+              name="emergencyPhone"
+              required
+              pattern="[\+]?[0-9\s\-\(\)]+"
+              placeholder="+1 (555) 987-6543"
+            />
+
+            <label for="specialNeeds">Special Accommodations or Needs</label>
+            <textarea
+              id="specialNeeds"
+              name="specialNeeds"
+              rows="3"
+              maxlength="300"
+              placeholder="Please describe any special accommodations, accessibility needs, or other requirements..."
+            ></textarea>
+          </fieldset>
+
+          <!-- Terms and Privacy -->
+          <fieldset>
+            <legend>Agreement & Privacy</legend>
+
+            <div class="checkbox-group">
+              <label>
+                <input
+                  type="checkbox"
+                  name="termsAccepted"
+                  value="yes"
+                  required
+                />
+                I agree to the
+                <a href="/terms" target="_blank">Terms and Conditions</a>
+                <span class="required">*</span>
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="privacyAccepted"
+                  value="yes"
+                  required
+                />
+                I have read and accept the
+                <a href="/privacy" target="_blank">Privacy Policy</a>
+                <span class="required">*</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="emailOptIn" value="yes" />
+                I would like to receive email updates about courses and programs
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="dataProcessing"
+                  value="yes"
+                  required
+                />
+                I consent to the processing of my personal data for educational
+                purposes <span class="required">*</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Form Submission -->
+          <div style="text-align: center; margin-top: 30px">
+            <button type="submit" class="submit-btn">
+              Submit Registration
+            </button>
+            <button type="reset" class="reset-btn">Reset Form</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer
+      style="
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        text-align: center;
+        border-radius: 8px;
+      "
+    >
+      <p>&copy; 2025 Advanced Web Development Program. All rights reserved.</p>
+      <p>
+        This form demonstrates comprehensive HTML5 validation and accessibility
+        features.
+      </p>
+    </footer>
+  </body>
+</html>
